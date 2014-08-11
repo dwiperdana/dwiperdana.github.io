@@ -101,15 +101,19 @@ failed. The <code>rake preview</code> is working fine, I can see the update on
 <code>localhost:4000</code> but if I access dwiperdana.github.io I can only see an
 empty blog.</p>
 
-<p>The command I used:
-    rake new_post[&ldquo;post-name&rdquo;]
-    rake generate
-    rake preview</p>
+<p>The command I used:</p>
 
-<p>The actually working command:
-    rake new_post[&ldquo;post-name&rdquo;]
-    rake integrate
-    rake gen_deploy</p>
+<pre><code>```rake new_post["post-name"]
+rake generate
+rake preview```
+</code></pre>
+
+<p>The actually working command:</p>
+
+<pre><code>```rake new_post["post-name"]
+rake integrate
+rake gen_deploy```
+</code></pre>
 
 <p>After that, my blog post is instantly on the dwiperdana.github.io.</p>
 
