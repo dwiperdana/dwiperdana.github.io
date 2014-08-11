@@ -9,10 +9,9 @@
   <meta name="author" content="Aditia Dwiperdana">
 
   
-  <meta name="description" content="I will be using this blog to store notes then I learn stuffs. Build
-using Octopress with Ruby on Rails. Hosted free
-on Github Pages.
-">
+  <meta name="description" content="I tried the basic command to create post and publish the post, but it
+failed. The rake preview is working fine, I can see the update on
+localhost: &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -74,6 +73,59 @@ on Github Pages.
       
   <header>
     
+      <h1 class="entry-title"><a href="/blog/2014/08/11/create-and-publishing-post-on-octopress/">Create and Publishing Post on Octopress</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-08-11T22:40:06+07:00" pubdate data-updated="true"></time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>I tried the basic command to create post and publish the post, but it
+failed. The <code>rake preview</code> is working fine, I can see the update on
+<code>localhost:4000</code> but if I access dwiperdana.github.io I can only see an
+empty blog.</p>
+
+<p>The command I used:
+  rake new_post[&ldquo;post-name&rdquo;]
+  rake generate
+  rake preview</p>
+
+<p>The actually working command:
+  rake new_post[&ldquo;post-name&rdquo;]
+  rake integrate
+  rake gen_deploy</p>
+
+<p>After that, my blog post is instantly on the dwiperdana.github.io.</p>
+
+<p>I have no idea what I am doing.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
       <h1 class="entry-title"><a href="/blog/2014/08/11/hello-world/">Hello World</a></h1>
     
     
@@ -118,6 +170,10 @@ on Github Pages.</p>
     <section>
   <h1>Recent Posts</h1>
   <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2014/08/11/create-and-publishing-post-on-octopress/">Create and Publishing Post on Octopress</a>
+      </li>
     
       <li class="post">
         <a href="/blog/2014/08/11/hello-world/">Hello World</a>

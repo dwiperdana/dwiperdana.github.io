@@ -4,7 +4,7 @@
   <title><![CDATA[My Programming Log]]></title>
   <link href="http://dwiperdana.github.io/atom.xml" rel="self"/>
   <link href="http://dwiperdana.github.io/"/>
-  <updated>2014-08-11T22:38:23+07:00</updated>
+  <updated>2014-08-11T22:44:09+07:00</updated>
   <id>http://dwiperdana.github.io/</id>
   <author>
     <name><![CDATA[Aditia Dwiperdana]]></name>
@@ -12,6 +12,32 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Create and Publishing Post on Octopress]]></title>
+    <link href="http://dwiperdana.github.io/blog/2014/08/11/create-and-publishing-post-on-octopress/"/>
+    <updated>2014-08-11T22:40:06+07:00</updated>
+    <id>http://dwiperdana.github.io/blog/2014/08/11/create-and-publishing-post-on-octopress</id>
+    <content type="html"><![CDATA[<p>I tried the basic command to create post and publish the post, but it
+failed. The <code>rake preview</code> is working fine, I can see the update on
+<code>localhost:4000</code> but if I access dwiperdana.github.io I can only see an
+empty blog.</p>
+
+<p>The command I used:
+  rake new_post[&ldquo;post-name&rdquo;]
+  rake generate
+  rake preview</p>
+
+<p>The actually working command:
+  rake new_post[&ldquo;post-name&rdquo;]
+  rake integrate
+  rake gen_deploy</p>
+
+<p>After that, my blog post is instantly on the dwiperdana.github.io.</p>
+
+<p>I have no idea what I am doing.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Hello World]]></title>
