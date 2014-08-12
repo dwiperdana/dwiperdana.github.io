@@ -4,7 +4,7 @@
   <title><![CDATA[My Programming Log]]></title>
   <link href="http://dwiperdana.github.io/atom.xml" rel="self"/>
   <link href="http://dwiperdana.github.io/"/>
-  <updated>2014-08-11T22:50:10+07:00</updated>
+  <updated>2014-08-12T23:00:20+07:00</updated>
   <id>http://dwiperdana.github.io/</id>
   <author>
     <name><![CDATA[Aditia Dwiperdana]]></name>
@@ -12,6 +12,29 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Fix HP Mini Brightness on Ubuntu 14.04]]></title>
+    <link href="http://dwiperdana.github.io/blog/2014/08/12/fix-hp-mini-brightness-on-ubuntu-14-dot-04/"/>
+    <updated>2014-08-12T22:53:29+07:00</updated>
+    <id>http://dwiperdana.github.io/blog/2014/08/12/fix-hp-mini-brightness-on-ubuntu-14-dot-04</id>
+    <content type="html"><![CDATA[<p>The screen brightness control current laptop, an HP Mini with Ubuntu 14.04 is not working. This is a problem because I sometimes use my laptop late at night. Found a fix by <a href="http://www.refreshit.info/2012/08/solved-brightness-increase-and-decrease.html">updating the grub</a>.</p>
+
+<h2>The solution</h2>
+
+<ol>
+<li>Open Terminal</li>
+<li>Edit the grub file <code>sudo vim /etc/default/grub</code></li>
+<li>Locate the <code>GRUB_CMDLINE_LINUX_DEFAULT ="quiet splash"</code></li>
+<li>Edit the line to be <code>GRUB_CMPLINE_LINUX_DEFAULT="quiet splash
+pcie_aspm=force acpi_backlight=vendor"</code></li>
+<li>Update the grub <code>sudo update-grub</code></li>
+</ol>
+
+
+<p>Done.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Create and Publishing Post on Octopress]]></title>

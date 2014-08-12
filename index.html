@@ -9,9 +9,7 @@
   <meta name="author" content="Aditia Dwiperdana">
 
   
-  <meta name="description" content="I tried the basic command to create post and publish the post, but it
-failed. The rake preview is working fine, I can see the update on
-localhost: &hellip;">
+  <meta name="description" content="The screen brightness control current laptop, an HP Mini with Ubuntu 14.04 is not working. This is a problem because I sometimes use my laptop late &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -67,6 +65,56 @@ localhost: &hellip;">
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2014/08/12/fix-hp-mini-brightness-on-ubuntu-14-dot-04/">Fix HP Mini Brightness on Ubuntu 14.04</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-08-12T22:53:29+07:00" pubdate data-updated="true"></time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>The screen brightness control current laptop, an HP Mini with Ubuntu 14.04 is not working. This is a problem because I sometimes use my laptop late at night. Found a fix by <a href="http://www.refreshit.info/2012/08/solved-brightness-increase-and-decrease.html">updating the grub</a>.</p>
+
+<h2>The solution</h2>
+
+<ol>
+<li>Open Terminal</li>
+<li>Edit the grub file <code>sudo vim /etc/default/grub</code></li>
+<li>Locate the <code>GRUB_CMDLINE_LINUX_DEFAULT ="quiet splash"</code></li>
+<li>Edit the line to be <code>GRUB_CMPLINE_LINUX_DEFAULT="quiet splash
+pcie_aspm=force acpi_backlight=vendor"</code></li>
+<li>Update the grub <code>sudo update-grub</code></li>
+</ol>
+
+
+<p>Done.</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -174,6 +222,10 @@ on Github Pages.</p>
     <section>
   <h1>Recent Posts</h1>
   <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2014/08/12/fix-hp-mini-brightness-on-ubuntu-14-dot-04/">Fix HP Mini Brightness on Ubuntu 14.04</a>
+      </li>
     
       <li class="post">
         <a href="/blog/2014/08/11/create-and-publishing-post-on-octopress/">Create and Publishing Post on Octopress</a>

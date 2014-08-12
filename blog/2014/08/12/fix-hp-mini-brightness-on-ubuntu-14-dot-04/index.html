@@ -5,13 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Create and Publishing Post on Octopress - My Programming Log</title>
+  <title>Fix HP Mini Brightness on Ubuntu 14.04 - My Programming Log</title>
   <meta name="author" content="Aditia Dwiperdana">
 
   
-  <meta name="description" content="I tried the basic command to create post and publish the post, but it
-failed. The rake preview is working fine, I can see the update on
-localhost: &hellip;">
+  <meta name="description" content="The screen brightness control current laptop, an HP Mini with Ubuntu 14.04 is not working. This is a problem because I sometimes use my laptop late &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -20,7 +18,7 @@ localhost: &hellip;">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://dwiperdana.github.io/blog/2014/08/11/create-and-publishing-post-on-octopress">
+  <link rel="canonical" href="http://dwiperdana.github.io/blog/2014/08/12/fix-hp-mini-brightness-on-ubuntu-14-dot-04">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="My Programming Log" type="application/atom+xml">
@@ -70,7 +68,7 @@ localhost: &hellip;">
   
   <header>
     
-      <h1 class="entry-title">Create and Publishing Post on Octopress</h1>
+      <h1 class="entry-title">Fix HP Mini Brightness on Ubuntu 14.04</h1>
     
     
       <p class="meta">
@@ -86,35 +84,28 @@ localhost: &hellip;">
   
 
 
-<time datetime="2014-08-11T22:40:06+07:00" pubdate data-updated="true"></time>
+<time datetime="2014-08-12T22:53:29+07:00" pubdate data-updated="true"></time>
         
       </p>
     
   </header>
 
 
-<div class="entry-content"><p>I tried the basic command to create post and publish the post, but it
-failed. The <code>rake preview</code> is working fine, I can see the update on
-<code>localhost:4000</code> but if I access dwiperdana.github.io I can only see an
-empty blog.</p>
+<div class="entry-content"><p>The screen brightness control current laptop, an HP Mini with Ubuntu 14.04 is not working. This is a problem because I sometimes use my laptop late at night. Found a fix by <a href="http://www.refreshit.info/2012/08/solved-brightness-increase-and-decrease.html">updating the grub</a>.</p>
 
-<p>The command I used:</p>
+<h2>The solution</h2>
 
-<pre><code>rake new_post["post-name"]
-rake generate
-rake preview
-</code></pre>
+<ol>
+<li>Open Terminal</li>
+<li>Edit the grub file <code>sudo vim /etc/default/grub</code></li>
+<li>Locate the <code>GRUB_CMDLINE_LINUX_DEFAULT ="quiet splash"</code></li>
+<li>Edit the line to be <code>GRUB_CMPLINE_LINUX_DEFAULT="quiet splash
+pcie_aspm=force acpi_backlight=vendor"</code></li>
+<li>Update the grub <code>sudo update-grub</code></li>
+</ol>
 
-<p>The actually working command:</p>
 
-<pre><code>rake new_post["post-name"]
-rake integrate
-rake gen_deploy
-</code></pre>
-
-<p>After that, my blog post is instantly on the dwiperdana.github.io.</p>
-
-<p>I have no idea what I am doing.</p>
+<p>Done.</p>
 </div>
 
 
@@ -137,7 +128,7 @@ rake gen_deploy
   
 
 
-<time datetime="2014-08-11T22:40:06+07:00" pubdate data-updated="true"></time>
+<time datetime="2014-08-12T22:53:29+07:00" pubdate data-updated="true"></time>
       
 
 
@@ -145,7 +136,7 @@ rake gen_deploy
     
       <div class="sharing">
   
-  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://dwiperdana.github.io/blog/2014/08/11/create-and-publishing-post-on-octopress/" data-via="dwiperdana" data-counturl="http://dwiperdana.github.io/blog/2014/08/11/create-and-publishing-post-on-octopress/" >Tweet</a>
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://dwiperdana.github.io/blog/2014/08/12/fix-hp-mini-brightness-on-ubuntu-14-dot-04/" data-via="dwiperdana" data-counturl="http://dwiperdana.github.io/blog/2014/08/12/fix-hp-mini-brightness-on-ubuntu-14-dot-04/" >Tweet</a>
   
   
   
@@ -154,10 +145,8 @@ rake gen_deploy
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/blog/2014/08/11/hello-world/" title="Previous Post: Hello World">&laquo; Hello World</a>
+        <a class="basic-alignment left" href="/blog/2014/08/11/create-and-publishing-post-on-octopress/" title="Previous Post: Create and publishing post on Octopress">&laquo; Create and publishing post on Octopress</a>
       
-      
-        <a class="basic-alignment right" href="/blog/2014/08/12/fix-hp-mini-brightness-on-ubuntu-14-dot-04/" title="Next Post: Fix HP Mini brightness on Ubuntu 14.04">Fix HP Mini brightness on Ubuntu 14.04 &raquo;</a>
       
     </p>
   </footer>
@@ -244,8 +233,8 @@ rake gen_deploy
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://dwiperdana.github.io/blog/2014/08/11/create-and-publishing-post-on-octopress/';
-        var disqus_url = 'http://dwiperdana.github.io/blog/2014/08/11/create-and-publishing-post-on-octopress/';
+        var disqus_identifier = 'http://dwiperdana.github.io/blog/2014/08/12/fix-hp-mini-brightness-on-ubuntu-14-dot-04/';
+        var disqus_url = 'http://dwiperdana.github.io/blog/2014/08/12/fix-hp-mini-brightness-on-ubuntu-14-dot-04/';
         var disqus_script = 'embed.js';
       
     (function () {
